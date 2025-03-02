@@ -290,7 +290,6 @@ section[title^="Why"] {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: space-evenly;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 10px;
@@ -337,7 +336,7 @@ tr > td {
 }
 
 /* Take the First Step */
-[title*="First"] {
+[title="Take the First Step"] {
     background-color: var(--Pink);
     height: 250px;
     display: flex;
@@ -393,9 +392,151 @@ small, small > a {
 }
 
 /*-------------------- MEDIA QUERY (medium) 620px --------------------------------*/
+@media screen and (min-width: 620px) {
+    header {
+        height: 220px;
+    }
 
+    [title^="One"] {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 0.6fr;
+        justify-content: space-evenly;
+        row-gap: 2px;
+        margin-bottom: 5px;
+    }
+
+    [title^="One"] h3 {grid-column: 1 / 4; grid-row: 1 /2;}
+    [title^="One"] section:first-child {grid-column: 2 / 3; grid-row: 2 / 3;}
+    [title^="One"] section:nth-child(2n) {grid-column: 1 / 2; grid-row: 2 / 3;}
+    [title^="One"] section:last-child {grid-column: 1 / 4; grid-row: 3 / 4;    
+                                        margin-top: 15px;}
+    
+    .infoSections {
+        margin: 10px 15px;
+    }
+
+    [title^=Gro] {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        justify-content: space-evenly;
+        row-gap: 2px;
+    }
+
+    [title^=Gro] h3 {grid-column: 1 / 4; grid-row: 1 / 1;}
+    [title^=Gro] section:first-child {grid-column: 1 / 2; grid-row: 2 / 3;}
+    [title^=Gro] section:last-child {grid-column: 2 / 3; grid-row: 2 / 3;}
+
+    section[title^="Why"] {
+        height: 220px;
+        margin-top: 15px;
+    }
+
+    #choiceReasons {
+        grid-template-columns: 150px 120px 150px 120px;
+        grid-template-rows: 120px;
+    }
+
+    [id^="cho"] :nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    [id^="cho"] :nth-child(2) span {
+        margin-left: 0;
+    }
+
+    [title=Pricing] {
+        display: grid;
+        align-items: start;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 0.8fr 0.5fr;
+        gap: 10px;
+    }
+
+    [title=Pricing] > h2 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+
+    [title$="One"] {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    [title^="First"] {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    [title$="Two"] {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+
+    [title^="Second"] {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    [title$="Three"] {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    [title^="Third"] {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+
+    [title$="Four"] {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+    [title^="Fourth"] {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+    }
+
+    [title="Take the First Step"] {
+        display: grid;
+        height: 225px;
+        align-items: start;
+        grid-template-columns: 0.8fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        column-gap: 10px;
+        row-gap: 5px;
+    }
+
+    [title="Take the First Step"] h2 {
+        grid-row: 1 / 1; grid-column: 1 / 3;
+        margin-left: 15px;
+    }
+    [title="Take the First Step"] p {
+        grid-row: 2 / 3; grid-column: 1 / 1;
+        margin-left: 15px;
+        padding: 0;
+        font-size: 0.9em;
+    }
+    [title="Take the First Step"] button {
+        width: 330px;
+        grid-row: 2 / 3; grid-column: 2 / 3;
+    }
+
+}
 
 /*-------------------- MEDIA QUERY (large) 950px ------------------------------------*/
+@media screen and (min-width: 950px) {
 
+
+    
+}
 
 /*-------------------- MEDIA QUERY (xl) 1280px ---------------------------------------*/
+@media screen and (min-width: 1280px) {
+
+
+    
+}
