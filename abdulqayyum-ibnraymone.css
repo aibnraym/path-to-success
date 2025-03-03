@@ -149,20 +149,6 @@ header > p :only-child {
     display: none;
 }
 
-/* nav {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    background-color: var(--Yellow);
-    border-radius: 0 0 30px 30px;
-    align-items: center;
-    justify-content: center;
-    z-index: 6;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-} */
-
 nav > h2 {
     display: flex;
     width: 100px;
@@ -185,24 +171,6 @@ nav > h2 {
 
 nav > ul {
     display: none;
-
-    /* display: flex;
-    flex-direction: row;
-    width: 60%;
-    height: 50px;
-    align-items: center;
-    justify-content: space-evenly;
-
-    font-family: "Inter", serif;
-    font-weight: bold;
-    text-transform: uppercase;;
-    background-color: var(--Yellow);
-    border-radius: 0 0 15px 15px;
-    z-index: 10;
-
-    position: fixed;
-    top: 0;
-    right: 0; */
 }
 
 /* >>>>>>>>>>>  main <<<<<<<<<<< */
@@ -397,6 +365,11 @@ small, small > a {
         height: 220px;
     }
 
+    header > p :only-child {
+        display: inline;
+        margin-left: 5px;
+    }
+
     [title^="One"] {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -529,14 +502,257 @@ small, small > a {
 
 /*-------------------- MEDIA QUERY (large) 950px ------------------------------------*/
 @media screen and (min-width: 950px) {
+    nav > h2 {
+        display: none;
+    }
 
+    nav > ul {
+        display: flex;
+        width: 60%;
+        height: 45px;
+        align-items: center;
+        justify-content: space-around;
 
+        font-family: "Inter", serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 25px;
+        background-color: var(--Yellow);
+        border-radius: 0 0 15px 15px;
+        z-index: 10;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    li a {
+        text-decoration: none;
+        color: var(--Dark-gray);
+        font-size: 0.9em;
+    }
+
+    [title="Our Services"] h3 {
+        font-size: 1.2em;
+    }
+
+    [title="Our Services"] h4 {
+        font-size: 0.9em;
+        margin-bottom: 0;
+    }
+
+    [title="Our Services"] p {
+        font-size: 0.8em;
+        margin-top: 1px;
+    }
+
+    .infoSections {
+        padding: 10px;
+        margin: 15px 10px;
+    }
+
+    [title="Our Services"] {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.1fr 1fr 0;
+        column-gap: 10px;
+        row-gap: 5px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+    }
+
+    [title="Our Services"] h2 {
+        grid-column: 1 / 5; grid-row: 1 / 2;
+    }    
+
+    [title^="One"] {
+        grid-column: 1 / 2; grid-row: 2 / 3;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.08fr 1fr 0.8fr 0.8fr;
+    }
+
+    [title^="One"] h3 {grid-column: 1 / 2; grid-row: 1 /2;}
+    [title^="One"] section:first-child {grid-column: 1 / 2; grid-row: 3 / 4;}
+    [title^="One"] section:nth-child(2n) {grid-column: 1 / 2; grid-row: 2 / 3;}
+    [title^="One"] section:last-child {grid-column: 1 / 2; grid-row: 4 / 5;    
+                                        margin-top: 15px;}
+
+    [title^="Gro"] {
+        grid-column: 2 / 3; grid-row: 2 / 3;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.7fr 0.5fr;
+        padding-bottom: 300px;
+    }
+
+    [title^=Gro] h3 {grid-column: 1 / 2; grid-row: 1 / 2;}
+    [title^=Gro] section:first-child {grid-column: 1 / 2; grid-row: 2 / 3;}
+    [title^=Gro] section:last-child {grid-column: 1 / 2; grid-row: 3 / 4;}
+
+    [title^="Work"] {
+        grid-column: 3 / 4; grid-row: 2 / 3;
+    }
+
+    [title^="Online"] {
+        grid-column: 4 / 5; grid-row: 2 / 3;
+    }
+
+    [title^="Work"] h3, [title^="Online"] h3 {
+        margin-bottom: 25px;
+    }
+
+    section[title^="Why"] {
+        height: 180px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        justify-content: space-evenly;
+    }
+
+    #choiceReasons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 105px;
+        margin: 0 10px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    [id^="cho"] > * {
+        height: 90%;
+        width: 100%;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    [id^="cho"] :not(:nth-child(2)), [id^="cho"] :nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        margin-left: 3px;
+    }
+
+    [title="Pricing"] {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40px 40px 200px;
+        gap: 10px;
+    }
+
+    tr {
+        display: grid;
+        grid-template-rows: 40px;
+        grid-template-columns: 140px 60px;
+        grid-auto-rows: 40px;
+        row-gap: 2px;
+        column-gap: 2px;
+        margin: 2px;
+        
+    }
+
+    [title$=ing] table {
+        width: 200px;
+    }
+
+    [title$=ing] h3 {
+        font-size: 1.2em;
+    }
+
+    [title$=ing] th {
+        font-size: 0.9em;
+    }
+
+    [title$=ing] td {
+        font-size: 0.9em;
+    }
     
+    [title="Pricing"] > h2 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+
+    [title="One-on-One Coaching"] {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    [title$="Two"] {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+
+    [title$="Three"] {
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+    }
+
+    [title$="Four"] {
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+    }
+
+    [title^="First"] {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    [title^="Second"] {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+
+    [title^="Third"] {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+
+    [title^="Fourth"] {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+    }
+
+    [title="Take the First Step"] {
+        display: grid;
+        height: 180px;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 0.8fr;
+        column-gap: 10px;
+        row-gap: 2px;
+    }
+
+    [title="Take the First Step"] h2 {
+        grid-row: 1 / 1; grid-column: 1 / 2;
+        margin-left: 15px;
+    }
+    [title="Take the First Step"] p {
+        grid-row: 2 / 3; grid-column: 1 / 1;
+        margin-left: 15px;
+        padding: 0;
+        font-size: 0.9em;
+    }
+    [title="Take the First Step"] button {
+        width: 330px;
+        grid-row: 1 / 3; grid-column: 2 / 3;
+        justify-self: center;
+        margin-top: 10px;
+    }
+
 }
 
 /*-------------------- MEDIA QUERY (xl) 1280px ---------------------------------------*/
 @media screen and (min-width: 1280px) {
-
+    body {
+        max-width: 1280px;
+        min-width: 1279px;
+        position: absolute;
+        left: 15%;
+        right: 15%;
+    }
 
     
 }
